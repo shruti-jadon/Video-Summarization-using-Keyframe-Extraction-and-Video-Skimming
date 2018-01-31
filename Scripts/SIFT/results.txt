@@ -1,0 +1,2 @@
+Sampling rate, F-measure, Summary Length
+1,0.222569,0.137821

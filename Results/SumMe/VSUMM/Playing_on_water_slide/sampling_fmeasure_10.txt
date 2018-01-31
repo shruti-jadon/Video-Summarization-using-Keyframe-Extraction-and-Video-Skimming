@@ -1,0 +1,19 @@
+1,306,0.148698,0.099837
+2,306,0.148698,0.099837
+5,306,0.148698,0.099837
+10,306,0.148923,0.099511
+25,122,0.054809,0.039478
+30,102,0.045033,0.032953
+50,61,0.015406,0.019576
+75,40,0.005344,0.012724
+100,30,0.002727,0.009462
+Sampling rate, Number of Clusters, F-measure, Summary Length
+1,306,0.148698,0.099837
+Sampling rate, Number of Clusters, F-measure, Summary Length
+2,306,0.148698,0.099837
+Sampling rate, Number of Clusters, F-measure, Summary Length
+5,306,0.148698,0.099837
+Sampling rate, Number of Clusters, F-measure, Summary Length
+10,306,0.148923,0.099511
+Sampling rate, Number of Clusters, F-measure, Summary Length
+25,122,0.054809,0.039478

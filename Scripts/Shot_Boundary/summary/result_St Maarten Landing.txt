@@ -1,0 +1,2 @@
+F-measure, Summary Length
+0.029566,0.022273

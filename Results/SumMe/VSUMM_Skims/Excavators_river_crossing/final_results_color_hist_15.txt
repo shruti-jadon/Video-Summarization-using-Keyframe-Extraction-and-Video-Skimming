@@ -1,0 +1,3 @@
+Sampling rate, Number of Clusters, F-measure, Summary Length
+5,33,0.328678,0.156054
+5,33,0.328678,0.156054
