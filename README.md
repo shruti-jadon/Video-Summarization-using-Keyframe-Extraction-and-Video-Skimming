@@ -1,6 +1,4 @@
 # Video-Summarization
-Video is one of the robust sources of information and the consumption of online and offline videos has reached an unprecedented level in the last few years. A fundamental challenge of extracting information from videos is a viewer has to go through the complete video to understand the context, as opposed to an image where the viewer can extract information from a single frame. In this project, we attempt to employ different Algorithmic methodologies including local features and deep neural networks along with multiple clustering methods to find an effective way of summarizing a video by interesting keyframe extraction. 
-
 In this project we use both keyframe extraction and video skimming for video summarization. For static keyframe extraction, we extract low level features using uniform sampling, image histograms, SIFT and image features from Convolutional Neural Network (CNN) trained on ImageNet. We also use different clustering methods including K-means and Gaussian clustering. We use video skims around the selected keyframes to make the summary fore fluid and comprehensible for humans. We take inspiration from the VSUMM method which is a prominent method in video summarization.
 
 ##Methods Used:
