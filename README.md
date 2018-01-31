@@ -3,22 +3,14 @@ Video is one of the robust sources of information and the consumption of online 
 
 In this project we use both keyframe extraction and video skimming for video summarization. For static keyframe extraction, we extract low level features using uniform sampling, image histograms, SIFT and image features from Convolutional Neural Network (CNN) trained on ImageNet. We also use different clustering methods including K-means and Gaussian clustering. We use video skims around the selected keyframes to make the summary fore fluid and comprehensible for humans. We take inspiration from the VSUMM method which is a prominent method in video summarization.
 
-Methods Used:
-\subsubsection{Uniform Sampling}
-
-Uniform sampling is one of the most common methods for keyframe extraction [cite uniform sampling]. The idea is to select every $k$th frame from the video where the value of $k$ is dictated by the length of the video. A usual choice of length for a summarized video is 5\% to 15\% of the original video, which means every 20th frame in case of 5\% or every 7th frame in case of 15\% length of the summarized video is chosen. For our experiment, we have chosen to use every 7th frame to summarize the video. This is a very simple concept which does not maintain semantic relevance. Uniform sampling is often considered as a baseline for video summarization. 
-
-\subsubsection{Image histogram}
-
-Image histograms represent the tonal distribution of an image. It gives us the number of pixels for a specific brightness values rated from 0 to 256. Image histograms contain important information about images and they can be utilized to extract keyframes. We extract the histogram from all frames. Based on the difference between histograms of two frames, we decide whether the frames have significant dissimilarities among them. We infer that, a significant inter-frame image histogram dissimilarity indicates a rapid change of scene in the video which might contain interesting components. For our experiments, if histograms of two consecutive frames are 50\% or more dissimilar, we extract that frame as a keyframe. 
-
-\subsubsection{Scale Invariant Feature Transform}
-
-Scale Invariant Feature Transform (SIFT) [cite SIFT], has been one of the most prominent local features used in computer vision is applications ranging from object and gesture recognition to video tracking. We use SIFT features for keyframe extraction. SIFT descriptors are invariant to scaling, translation, rotation, small deformations, and partially invariant to illumination, making it a robust descriptor to be used as local features. Important locations are first defined using a scale space of smoothed and resized images and applying difference of Gaussian functions on these images to find the maximum and minimum responses. Non maxima suppression is performed and putative matches are discarded to ensure a collection of highly interesting and distinct collection of keypoints. Histogram of oriented gradients is performed by dividing the image into patches to find the dominant orientation of the localized keypoints. These keypoints are extracted as local features. In our experiment, we have extracted HOGs for each frame in video, and then put a threshold which could take 15\% of video. 
-
-\subsubsection{VSUMM} 
+##Methods Used:
+1. Uniform Sampling
+2. Image histogram
+3. Scale Invariant Feature Transform
+4. VSUMM:
 This technique has been one of the fundamental techniques in video summarization in the unsupervised setup. The algorithm uses the standard K-means algorithm to cluster features extracted from each frame. Color histograms are proposed to be used in \cite{deAvila2011}. Color histograms are 3-D tensors, where each pixel’s values in the RGB channels determines the bin it goes into. Since each channel value ranges in 0 − 255, usually, 16 bins are taken for each channel resulting in a 16X16X16 tensor. Due to computational reasons, a simplified version of this histogram was computed, where each channel was treated separately, resulting in feature vectors for each frame belonging to R 48 . The nest step suggested for clustering is slightly different. But, the simplified color histograms give comparable performance to the true color histograms. The features extracted from VGG16 at the 2nd fully connected layer were tried, and clustered using kmeans.
 
-\subsubsection{ResNet16 on ImageNet}
+5. ResNet16 on ImageNet
 
-While reading about approach of VSUMM, we decided to test a different approach. We chose ResNet16 \cite{He2016} trained on image net, with different range of filters, and chopped of last loss layer, so as to obtain the embeddings of each image (512 dimension). We extracted frames out of the videos, and forward pass them through ResNet16, and after obtaining the embeddings for each frame in video, we clustered them using 2 algorithms: Kmeans , and Gaussian Mixture Models. The number of cluster has been take as 15\% of the video frame numbers. We later chose the frames closest to the center of clusters as the keyframes. A sample CNN architecture for VSUMM and RESNET16 is presented in Fig 2.
+##Results:
+![alt text](https://raw.githubusercontent.com/shruti-jadon/Video-Summarization/edit/master/img.png)
