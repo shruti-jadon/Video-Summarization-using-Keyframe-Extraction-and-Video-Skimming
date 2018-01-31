@@ -13,7 +13,7 @@ This technique has been one of the fundamental techniques in video summarization
 5. ResNet16 on ImageNet
 
 ##Results:
-![alt text](https://raw.githubusercontent.com/shruti-jadon/Video-Summarization/edit/master/image.png)
+![alt text](https://github.com/shruti-jadon/Video-Summarization/blob/master/image.png)
 
 '''
 To Run This Project
