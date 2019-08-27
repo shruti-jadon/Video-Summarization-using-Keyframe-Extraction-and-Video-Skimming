@@ -1,6 +1,12 @@
 # Video-Summarization
 In this project we use both keyframe extraction and video skimming for video summarization. For static keyframe extraction, we extract low level features using uniform sampling, image histograms, SIFT and image features from Convolutional Neural Network (CNN) trained on ImageNet. We also use different clustering methods including K-means and Gaussian clustering. We use video skims around the selected keyframes to make the summary fore fluid and comprehensible for humans. We take inspiration from the VSUMM method which is a prominent method in video summarization.
 
+## Citation
+If you find our code useful, please consider citing our work using the bibtex:
+```
+@article{Jadon_Jasim_2019, title={Video Summarization}, url={http://rgdoi.net/10.13140/RG.2.2.23087.38564/1}, DOI={10.13140/rg.2.2.23087.38564/1}, journal={Unpublished}, publisher={Unpublished}, author={Jadon, Shruti and Jasim, Mahmood}, year={2019} }
+```
+
 ##Methods Used:
 1. Uniform Sampling
 2. Image histogram
