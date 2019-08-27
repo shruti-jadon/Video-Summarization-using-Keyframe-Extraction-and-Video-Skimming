@@ -4,7 +4,8 @@ In this project we use both keyframe extraction and video skimming for video sum
 ## Citation
 If you find our code useful, please consider citing our work using the bibtex:
 ```
-@article{Jadon_Jasim_2019, title={Video Summarization}, url={http://rgdoi.net/10.13140/RG.2.2.23087.38564/1}, 
+@article{Jadon_Jasim_2019, title={Video Summarization}, 
+url={http://rgdoi.net/10.13140/RG.2.2.23087.38564/1}, 
 DOI={10.13140/rg.2.2.23087.38564/1}, journal={Unpublished}, publisher={Unpublished}, 
 author={Jadon, Shruti and Jasim, Mahmood}, year={2019} }
 ```
